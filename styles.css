@@ -1,0 +1,53 @@
+:root {
+  --table-size: 20;
+  --font-size: calc(2vw + 2vh);
+  --cell-border-color: transparent;
+  --cell-border-hover-color: rgba(255, 255, 255, 0.2);
+  --cell-padding: 5px;
+  --text-color: white;
+  --background-color: #000000;
+}
+
+body {
+  font-size: var(--font-size);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.info-poster {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
+
+.info-poster-text {
+  text-align: center;
+  font-size: 0.5em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.background-table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  border-collapse: collapse;
+  z-index: 0;
+}
+
+.background-table td {
+  border: 1px solid var(--cell-border-color);
+  width: calc(100% / var(--table-size));
+  height: calc(100% / var(--table-size));
+  text-align: center;
+  vertical-align: middle;
+  font-size: var(--font-size);
+  color: var(--text-color);
+  padding: var(--cell-padding);
+  transition: border-color 0.3s ease;
+}
